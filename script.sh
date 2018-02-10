@@ -5,7 +5,9 @@
 # 1. install python3 and packages
 sudo apt-get install python3-pip
 pip3 install pymongo
-pip3 install json 
+pip3 install json
+pip3 install jupyter
+sudo apt-get install jupyter-core
 
 # 2. install mongodb
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
@@ -28,4 +30,4 @@ wget -O theater.json https://data.cityofnewyork.us/api/views/2hzz-95k8/rows.json
 python3 loadPythonCleanv2.py
 
 # 5. launch queries
-python
+python3 -m IPython notebook
