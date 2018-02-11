@@ -6,8 +6,6 @@
 sudo apt-get install python3-pip
 pip3 install pymongo
 pip3 install json
-#pip3 install jupyter
-#sudo apt-get install jupyter-core
 
 # 2. install mongodb
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
@@ -27,7 +25,5 @@ wget -O museum.geojson 'https://data.cityofnewyork.us/api/geospatial/ekax-ky3z?m
 wget -O theater.json https://data.cityofnewyork.us/api/views/2hzz-95k8/rows.json?accessType=DOWNLOAD
 
 # 4. load databases in mongoDB
-python3 loadPythonCleanv2.py
+python3 loadDatas.py
 
-# 5. launch queries
-mongo
