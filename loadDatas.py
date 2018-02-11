@@ -24,44 +24,7 @@ cnx = pymongo.MongoClient(cnx_string)
 db = cnx.datas
 db.museums.insert(datas)
 
-#####
-json_data = open("theater.json")
-data = json.load(json_data)
-meta = data["meta"]
 
-colNames = []
-for elem in meta["view"]["columns"]:
-    colNames.append(elem["fieldName"])
-colNames
-
-datas = []
-for elem in data["data"]:
-    id_ = elem[colNames.index(":id")]
-    geom = elem[colNames.index("the_geom")]
-    name = elem[colNames.index("name")]
-    tel = elem[colNames.index("tel")]
-    url = elem[colNames.index("url")]
-    address1 = elem[colNames.index("address1")]
-    address2 = elem[colNames.index("addres2")]
-    city = elem[colNames.index("city")]
-    zip_ = elem[colNames.index("zip")]
-    datas.append({
-            'id':id_,
-            'the_geom' : geom,
-            'name' : name,
-            'tel': tel,
-            'url':url,
-            'address1':address1,
-            'address2':address2,
-            'city':city,
-            'zip':zip_})
-    
-with open("./theater_Structure.json", "w") as outfile:
-    json.dump(datas,outfile,indent=4)
-json_data = open("theater_Structure.json")
-data = json.load(json_data)
-
-db.theaters.insert(data)
 
 # load stations métro
 json_data = open("station_metro.geojson")
