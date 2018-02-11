@@ -1,4 +1,4 @@
-projet réalisé par pierre laffitte
-
-
-wget https://download.robomongo.org/0.8.5/linux/robomongo-0.8.5-x86_64.deb
+projet réalisé par Pierre Laffitte
+dans le cadre de l'UE NoSQL
+Eleve en 3eme année de l'ENSAI
+Filière SID
